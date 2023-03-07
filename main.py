@@ -12,7 +12,7 @@ from datetime import datetime
 app = Flask(__name__)
 
 # Configure this environment variable via app.yaml
-# CLOUD_STORAGE_BUCKET = os.environ['CLOUD_STORAGE_BUCKET']
+# CLOUD_STORAGE_BUCKET = os.environ['kishore-buc']
 CLOUD_STORAGE_BUCKET = 'cloud-run-bucket'
 credentials = service_account.Credentials.from_service_account_file("credentials.json")
 
