@@ -13,17 +13,17 @@ app = Flask(__name__)
 
 # Configure this environment variable via app.yaml
 # CLOUD_STORAGE_BUCKET = os.environ['CLOUD_STORAGE_BUCKET']
-CLOUD_STORAGE_BUCKET = 'sacred-alloy-379104-urlsigner'
+CLOUD_STORAGE_BUCKET = 'cloud-run-bucket'
 credentials = service_account.Credentials.from_service_account_file("credentials.json")
 
 @app.route('/')
 def index() -> str:
     now = datetime.now()
     date_tdy=str(now.date())
-    datetime_str = date_tdy+' '+'21:59:00'
+    datetime_str = date_tdy+' '+'5:00:00'
     datetime_object = datetime.strptime(datetime_str, '%Y-%m-%d %H:%M:%S')
 
-    datetime_str1 = date_tdy+' '+'22:10:00'
+    datetime_str1 = date_tdy+' '+'6:10:00'
     datetime_object1 = datetime.strptime(datetime_str1, '%Y-%m-%d %H:%M:%S')
 
 
